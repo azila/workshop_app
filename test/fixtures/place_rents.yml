@@ -1,0 +1,16 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+rent_one:
+  parking: parking_one
+  car: car_one
+  start_date: 2014-11-05 12:30:25
+  end_date: 2014-11-07 12:30:25
+  price: 18
+
+rent_two:
+  parking: parking_two
+  car: car_two
+  start_date: <%= 1.day.ago %>
+  end_date: <%= 2.days.from_now %>
+  price: 10
+

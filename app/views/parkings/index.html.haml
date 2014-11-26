@@ -1,0 +1,57 @@
+%h2= t('.parkings')
+
+=link_to t('.add'), new_parking_path
+
+%h3= t('.search')
+= form_tag parkings_path, :method => :get  do
+  %p 
+  = t('kind')
+  = check_box_tag(:public, value = "1", checked = false) 
+  = label_tag t('public')
+  = check_box_tag(:private, value = "1", checked = false) 
+  = label_tag t('private')
+  %p
+  = label_tag(:day_price_range, t('.day_price_range'))
+  = label_tag("min:")
+  = text_field_tag(:day_price_min)
+  = label_tag("max:")
+  = text_field_tag(:day_price_max)
+  %p
+  = label_tag(:hour_price_range, t('.hour_price_range'))
+  = label_tag("min:")
+  = text_field_tag(:hour_price_min)
+  = label_tag("max:") 
+  = text_field_tag(:hour_price_max)
+  %p
+  = label_tag(:location, t('city'))
+  = text_field_tag(:location)
+  %p
+  = submit_tag t('.start_search')
+
+%p
+%table
+  %thead
+    %tr
+      %th &nbsp;
+      %th= t('city') 
+      %th= t('places')
+      %th= t('hour_price')
+      %th= t('day_price')
+  %tbody
+    - @parkings.each do |parking|
+      %tr
+        %td &nbsp;
+        %td= parking.address.try(:city)
+        %td= parking.places
+        %td= parking.hour_price
+        %td= parking.day_price
+        %td=link_to t('.show'), parking_path(parking), id: "show_#{parking.id}"
+        %td &nbsp;
+        %td=link_to t('.edit'), edit_parking_path(parking), id: "edit_#{parking.id}"
+        %td &nbsp;
+        %td=link_to t('.rent'), new_parking_place_rent_url(parking)
+        %td &nbsp;
+        %td=link_to t('.delete'), parking_path(parking), id: "delete_#{parking.id}", method: :delete, data: { confirm: 'Are you sure?' }
+
+%p= will_paginate @parkings
+

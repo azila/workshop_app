@@ -1,0 +1,20 @@
+
+address_one:
+  city: Krakow
+  street: Piekarska
+  zip_code: 11-111
+
+address_two:
+  city: Krakow
+  street: Rakowicka
+  zip_code: 22-222
+
+address_three:
+  city: Warszawa
+  street: Nowa
+  zip_code: 33-333
+
+address_four:
+  city: Kiev
+  street: Mendelejewa
+  zip_code: 44-444

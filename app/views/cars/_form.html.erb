@@ -1,0 +1,20 @@
+<%= error_messages_for(car) %>
+
+<%= form_for(car) do |p| %>
+  <p>
+    <b><%= p.label(:model) %></b>
+    <%= p.text_field(:model) %>
+  </p>
+  <p>
+    <b><%= p.label(:registration_number) %></b>
+    <%= p.text_field(:registration_number) %>
+  </p>
+
+  <p>
+    <b><%= p.label :image %></b><%= p.file_field :image %></b>
+    <b>Delete image</b>
+    <%= p.check_box :remove_image %>
+  <p>
+    <%= p.submit %>
+  </p>
+<% end %>

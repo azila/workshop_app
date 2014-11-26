@@ -1,0 +1,63 @@
+pl:
+  parking_created_success: "Parking został stworzony."
+  parking_updated_success: "Parking został zaktualizowany."
+  parking_deleted_success: "Parking pomyślnie usunięty."
+  no_parking_found: "Parkingu nie znaleziono"
+  back: "<< Powrót do strony glównej"
+  hour_price: "Cena za godzinę"
+  day_price: "Cena za dzień"
+  address: "Adres"
+  street: "Ulica"
+  zip_code: "Kod pocztowy"
+  kind: "Typ"
+  public: "Publiczny"
+  places: "Miejsca"
+  city: "Miasto"
+  private: "Prywatny"
+  outdoor: "Plenerowy"
+  indoor: "Domowy"
+  street: "Uliczny"
+
+  parkings:
+
+    index:
+      parkings: Parkingi
+      search: "Wyszukiwanie"
+      day_price_range: "Przedział cenowy za dzień"
+      hour_price_range: "Przedział cenowy za godzinę"
+      start_search: "Wyszukaj"
+      add: "Dodaj nowy parking"
+      show: "Pokaż"
+      edit: "Edytuj"
+      delete: "Usuń"
+      rent: "Wynajem"
+
+    show:
+      show_parking: "Dane o parkingu"
+      owner: "Właściciel"
+
+    new:
+      create_parking: "Stwórz Parking"
+    
+    edit:
+      update_parking: "Aktualizuj Parking"
+
+  activerecord:
+    models:
+      parking: parking
+    attributes:
+      parking:
+        hour_price: "Cena za godzinę"
+        day_price: "Cena za dzień"
+        places: "Miejsca"
+      address: 
+        street: "Ulica"
+        city: "Miasto"
+        zip_code: "Kod pocztowy"
+
+  helpers:
+    submit:
+      parking:
+        update: "Aktualizuj %{model}"
+        create: "Stwórz %{model}"
+

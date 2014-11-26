@@ -1,0 +1,26 @@
+<%= link_to("<< Back to List", parkings_path) %>
+
+<div class="place_rents new">
+  <h2>Create Place Rent</h2>
+  <%= error_messages_for(@place_rent) %>
+
+  <%= form_for [@parking, @place_rent] do |p| %>
+  <p>
+    <b><%= p.label(:start_date) %></b>
+    <%= select_datetime DateTime.now, prefix: :start_date %>
+  </p>
+  <p>
+    <b><%= p.label(:end_date) %></b>
+    <%= select_datetime 1.day.from_now, prefix: :end_date %>
+  </p>
+  <p>
+    <b><%= p.label :car %></b>
+    <%= p.select(:car_id, options_for_select(current_person.cars.map { |car| [car.model, car.id] })) %>
+  </p>
+
+  <p>
+    <%= submit_tag("Create Place Rent") %>
+  </p>
+
+  <% end %>
+</div>

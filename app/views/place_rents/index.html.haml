@@ -1,0 +1,17 @@
+%h2 Place Rents
+%p
+%table
+  %thead
+    %tr
+      %th &nbsp;
+      %th Start date
+      %th &nbsp;
+      %th End date
+  %tbody
+    - @place_rents.each do |place_rent|
+      %tr
+        %td &nbsp;
+        %td= place_rent.start_date
+        %th &nbsp;
+        %td= place_rent.end_date
+        %td=link_to 'Show', place_rent_path(place_rent.identifier)

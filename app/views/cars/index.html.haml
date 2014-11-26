@@ -1,0 +1,20 @@
+%h2 Cars
+=link_to 'Add New Car', new_car_path
+%p
+%table
+  %thead
+    %tr
+      %th &nbsp;
+      %th Model
+      %th Registration number
+  %tbody
+  - if @cars
+    - @cars.each do |car|
+      %tr
+        %td &nbsp;
+        %td= car.model
+        %td= car.registration_number
+        %td=link_to 'Show', car_path(car), id: "show_#{car.id}"
+        %td=link_to 'Edit', edit_car_path(car), id: "edit_#{car.id}"
+        %td=link_to 'Delete', car_path(car), id: "delete_#{car.id}", method: :delete, data: { confirm: 'Are you sure?' }
+

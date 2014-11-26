@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+fb_account_one:
+  provider: facebook
+  uid: 1234567
+  person: person_one
+
+fb_account_two:
+  provider: facebook
+  uid: 7654321
+  person: person_two

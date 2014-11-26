@@ -1,0 +1,44 @@
+<%= error_messages_for(parking) %>
+
+<%= form_for(parking) do |p| %>
+  <p>
+    <b><%= p.label(:hour_price) %></b>
+    <%= p.text_field(:hour_price) %>
+  </p>
+  <p>
+    <b><%= p.label(:day_price) %></b>
+    <%= p.text_field(:day_price) %>
+  </p>
+  <p>
+    <b><%= p.label(:places) %></b>
+    <%= p.text_field(:places) %>
+  </p>
+  <p>
+    <b><%= p.label(:kind) %></b>
+    <%= p.radio_button(:kind, 'outdoor') %><%=  t 'outdoor' %>
+    <%= p.radio_button(:kind, 'indoor') %><%= t 'indoor' %>
+    <%= p.radio_button(:kind, 'private') %><%= t 'private' %>
+    <%= p.radio_button(:kind, 'street') %><%= t 'street' %>
+  </p>
+
+  <%= p.fields_for :address do |address_fields| %>
+    <p>
+      <b><%= address_fields.label(:city) %></b>
+      <%= address_fields.text_field(:city) %>
+    </p>
+    <p>
+      <b><%= address_fields.label(:street) %></b>
+      <%= address_fields.text_field(:street) %>
+    </p>
+    <p>
+      <b><%= address_fields.label(:zip_code) %></b>
+      <%= address_fields.text_field(:zip_code) %>
+    </p>
+  <% end %>
+
+  <p>
+    <%= p.submit %>
+  </p>
+  
+<% end %>
+

@@ -1,0 +1,4 @@
+account_one:
+  email: korotchenko.liza@gmail.com
+  person: person_two
+  password_digest: <%= BCrypt::Password.create('ruby') %>

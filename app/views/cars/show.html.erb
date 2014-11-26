@@ -1,0 +1,16 @@
+<%= link_to("<< Back to List", cars_path) %>
+
+<div class="cars show">
+  <h2>Show Car</h2>
+
+  <ul>
+    <li><b>Model:</b><%= @car.model %></li>
+    <li><b>Registration number:</b><%= @car.registration_number %></li>
+    <% if @car.image %>
+    <li><b>Image:</b></li>
+      <p><%= image_tag @car.image.thumb('400x200').url if @car.image_stored?  %></p>
+    <% end %>  
+  </ul>
+  
+</div>
+

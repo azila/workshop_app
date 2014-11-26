@@ -1,0 +1,9 @@
+car_one:
+  registration_number: 65HHJGG
+  model: BMW
+  owner: person_one
+
+car_two:
+  registration_number: UIU88999
+  model: Ford
+  owner: person_two

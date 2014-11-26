@@ -1,0 +1,17 @@
+<%= link_to( t('back'), parkings_path )%>
+
+<div class="parkings show">
+  <h2><%= t('.show_parking') %></h2>
+
+  <ul>
+    <li><b><%= t 'kind' %>:</b> <%= @parking.kind %></li>
+    <li><b><%= t 'hour_price' %>:</b> <%= @parking.hour_price %></li>
+    <li><b><%= t 'day_price' %>:</b> <%= @parking.day_price %></li>
+    <li><b><%= t 'places' %>:</b> <%= @parking.places %></li>
+    <p><%= t 'address' %></p>
+    <li><b><%= t 'city' %>:</b> <%= @parking.address.city if @parking.address.present? %></li>
+    <li><b><%= t 'street' %></b> <%= @parking.address.street if @parking.address.present? %></li>
+    <li><b><%= t 'zip_code' %></b> <%= @parking.address.zip_code if @parking.address.present? %></li>
+    <li><b><%= t '.owner' %></b> <%= @parking.owner.try(:full_name) %></li>
+  </ul>
+</div>

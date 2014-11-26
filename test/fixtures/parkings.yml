@@ -1,0 +1,28 @@
+parking_one:
+  hour_price: 1
+  day_price: 10
+  places: 100
+  kind: private
+  address: address_one
+
+parking_two:
+  hour_price: 2
+  day_price: 20
+  places: 200
+  kind: street
+  address: address_two
+
+parking_three:
+  hour_price: 3
+  day_price: 30
+  places: 300
+  kind: outdoor
+  address: address_three
+
+parking_four:
+  hour_price: 12
+  day_price: 34
+  places: 567
+  kind: indoor
+  address: address_four
+

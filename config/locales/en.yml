@@ -1,0 +1,65 @@
+en:
+  parking_created_success: "Parking created successfully."
+  parking_updated_success: "Parking updated successfully."
+  parking_deleted_success: "Parking deleted successfully."
+  no_parking_found: "Parking not found"
+  back: "<< Back to main bage"
+  hour_price: "Hour price"
+  day_price: "Day price"
+  address: "Address"
+  street: "Street"
+  zip_code: "Zip code"
+  kind: "Kind"
+  public: "Public"
+  places: "Places"
+  city: "City"
+  private: "Private"
+  outdoor: "Outdoor"
+  indoor: "Indoor"
+  street: "Street"
+
+  parkings:
+
+    index:
+      parkings: "Parkings"
+      search: "Search"
+      day_price_range: "Day price range"
+      hour_price_range: "Hour price range"
+      start_search: "Search"
+      add: "Add New Parking"
+      show: "Show"
+      edit: "Edit"
+      delete: "Delete"
+      rent: "Rent a place"
+
+    show:    
+      show_parking: "Show Parking"
+      owner: "Owner"
+
+    new:
+      create_parking: "Create Parking"
+
+    edit:
+      update_parking: "Update Parking"
+
+  activerecord:
+    models:
+      parking: Parking
+    attributes:
+      parking:
+        hour_price: "Hour price"
+        day_price: "Day price"
+        places: "Places"
+      address:
+        street: "Street"
+        city: "City"
+        zip_code: "Zip code"
+
+  helpers:
+    submit:
+      parking:
+        update: "Update %{model}"
+        create: "Create %{model}"
+
+
+
